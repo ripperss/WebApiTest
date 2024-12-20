@@ -9,6 +9,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Notes.Persistence;
 
@@ -18,7 +19,7 @@ public class NoteDbontext : DbContext, INotesDbContext
 
     public NoteDbontext(DbContextOptions<NoteDbontext> options) :base(options)
     {
-
+        Database.EnsureCreated();
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
