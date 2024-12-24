@@ -10,6 +10,7 @@ namespace Notes.Application.Notes.Queries.GetNotelist
     public class GetNoteListQueries : IRequest<NoteListVm>
     {
         public Guid UserId { get; set; }
+        public Guid Id { get; set; }
             
     }
 }
