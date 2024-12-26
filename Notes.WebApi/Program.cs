@@ -4,6 +4,7 @@ using Notes.Persistence;
 using System.Reflection;
 using Notes.Application;
 using AutoMapper;
+using Notes.WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,8 @@ var app = builder.Build();
 
 
 app.UseRouting();
+
+app.UseCustomExeptionHandler();
 
 app.UseHttpsRedirection();
 
